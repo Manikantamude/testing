@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calculator project</title>
+	<style type="text/css">
+		h1{
+			text-align:center;
+			background-color:purple;
+			color:white;
+		}
+		#formstyle{
+			width:300px;
+			height:530px;
+			margin:auto;
+			border:6px solid mediumblue;
+			border-radius:5px;
+			padding:20px;
+		}
+		input{
+			width:20px;
+			background-color:slateblue;
+			color:navy;
+			border:3px solid blue;
+			border-radius:5px;
+			padding:25px;
+			margin:5px;
+			font-size:15px;
+			color:white;
+		}
+		#cal{
+			width:250px;
+			border:5px solid green;
+			border-radius: 3px;
+			padding:20px;
+			margin:auto;
+		}
+		#allclear{
+			width: 270px;
+			border:3px solid blue;
+			border-radius:2px;
+			padding:10px;
+			background-color:slateblue;
+			color:white;
+		}
+		#result{
+			margin-left:70%;
+			width:5%;
+
+		}
+	</style>
+</head>
+<body>
+<h1>CALCULATOR</h1>		
+	<section id="formstyle">
+		<form name="frm1" onsubmit="return callTo()">
+			<input id="cal" type="text" name="ans"/><br/><br/>
+			<input onclick="frm1.ans.value+='1'" type="button" value="1"/>
+			<input onclick="frm1.ans.value+='2'" type="button" value="2"/>
+			<input onclick="frm1.ans.value+='3'" type="button" value="3"/>
+			<input onclick="frm1.ans.value+='*'" type="button" value="*"/><br/><br/>
+			<input onclick="frm1.ans.value+='4'" type="button" value="4"/>
+			<input onclick="frm1.ans.value+='5'" type="button" value="5"/>
+			<input onclick="frm1.ans.value+='6'" type="button" value="6"/>
+			<input onclick="frm1.ans.value+='+'" type="button" value="+"/><br/><br/>
+			<input onclick="frm1.ans.value+='7'" type="button" value="7"/>
+			<input onclick="frm1.ans.value+='8'" type="button" value="8"/>
+			<input onclick="frm1.ans.value+='9'" type="button" value="9"/>
+			<input onclick="frm1.ans.value+='-'" type="button" value="-"/><br/><br/>
+			<input onclick="frm1.ans.value+='/'" type="button" value="/"/>
+			<input onclick="frm1.ans.value+='0'" type="button" value="0"/>
+			<input onclick="frm1.ans.value+='.'" type="button" value="."/>
+			<input onclick="frm1.ans.value+='='+eval(frm1.ans.value)" type="button" value="="/>
+			<p><input id="allclear" onclick="frm1.ans.value=' ' " type="button" value="clear"/></p>
+		</form>
+	</section>
+	<!-- <input id="result" type="text" placeholder="answer"/>
+	<script type="text/javascript">
+		function callTo(){
+			var s=frm1.ans.value;
+			var arr=frm1.ans.value.split(" ");
+			console.log(arr[1]);
+			document.getElementById("result").value=arr[1];
+			return false;
+		}
+	</script> -->
+</body>
+</html>
